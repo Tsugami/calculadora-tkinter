@@ -3,7 +3,7 @@ from tkinter import *
 delete_button = '➡'
 delete_all_button = 'c'
 
-buttons = [1,2,3,'+','-',4,5,6,'*','/',7,8,9,delete_button,all_delete_button,222]
+buttons = [1,2,3,'+','-',4,5,6,'*','/',7,8,9,delete_button,delete_all_button,222]
 
 class Calculadora:
   def __init__ (self, root):
@@ -39,7 +39,7 @@ def add (x):
   global operator
   if x == delete_button:
     operator = operator[:-1]
-  elif x == all_delete_button:
+  elif x == delete_all_button:
     operator = ''
   else:
     operator = operator + x
