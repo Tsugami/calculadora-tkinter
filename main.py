@@ -58,7 +58,7 @@ class Calculadora:
     elif button == delete_all_button:
     	self.operator = ''
     elif button == '=':
-    	self.operator = eval(self.operator)
+    	self.operator = str(eval(str(self.operator)))
     else:
     	if len(self.operator) > 0 and str(button) == str(self.operator[-1]) and str(button) in expressions:
     		return
@@ -68,7 +68,7 @@ class Calculadora:
   def update (self):
     try:
       self.operator_label.config(text=self.operator)
-      self.result_label.config(text=eval(self.operator))
+      self.result_label.config(text=str(eval(self.operator)))
     except:
   	  pass
 
